@@ -54,12 +54,17 @@ Vous avez vu dans cette séquence comment créer des secrets GiHUB afin de mettr
 Vous pouvez observez les différentes couches OSI sur votre site **{site}.pythonanywhere.com/osi**  
   
 **Exercice 1 : Définissez les termes suivants (Répondre directement dans GitHub)**    
-* Un protocole,  
-* Une entité protocolaire,
-* Un service,  
-* Une primitive de service,  
-* Une Service Data Unit (SDU) par rapport à une PDU  
-* Un point d'accès à un service SAP (Service Access Point)  
+* Un protocole : Un protocole de niveau N est un ensemble de règles associé à une couche N qui permet de supporter un service N, par exemple acheminer des informations entre deux hôtes. Un protocole de niveau N peut supporter la mise en oeuvre éventuelle de plusieurs services. Ces règles s'enchaînent de façon précise, définissent des états dont l'occurrence dépend d'états antérieurs et d'événements, et qui génère d'autres événements.
+
+* Une entité protocolaire : Une entité protocolaire de niveau N correspond au programme qui exécute un protocole de niveau N sur un hôte. C'est souvent matérialisé par un automate (machine à états - modèle formel qui décrit les différents états possibles). On utilise dans ce cas l'expression automate protocolaire.
+  
+* Un service : Un service est une fonctionnalité particulière offerte par une couche à la couche supérieure : gestion de connexion (ouverture/fermeture/réinitialisation), transfert de données, données urgentes… Pour réaliser le service, la couche s'appuie sur les services de la couche inférieure. Un service est aussi défini par les primitives qu'il offre.
+
+* Une primitive de service :  Une primitive de service est une opération qui invoque un service réalisé par une entité protocolaire. Pour un service, elles sont au nombre de 4 : REQ (Request), IND (Indication), RESP (Response), CONF (Confirmation). Parfois REQ et IND sont les seules définies. Par exemple T-CON-REQ, est une primitive de service de demande d'ouverture de connexion de la couche Session ou au-dessus à la couche Transport.
+ 
+* Une Service Data Unit (SDU) par rapport à une PDU : SDU vs PDU : Une SDU correspond aux informations qui sont passées à l'aide d'une primitive de service, Les PDU pour émission sont formées par une SDU de la couche supérieure à laquelle on a ajouté des informations de contrôle (adresse destination, adresse  source, numérotation de message, taille de fenêtre glissante…) pour la transmettre
+
+* Un point d'accès à un service SAP (Service Access Point) : SAP (Service Access Point) : Un point d'accès à un service SAP (Service Access Point) est un point de traversée de l'interface entre 2 couches adjacentes. C'est aussi l'identification ou l'adresse, unique, d'un accès à un service.
 
 ---------------------------------------------------
 🗺️ Séquence 5 : Retour sur le protocole DHCP
