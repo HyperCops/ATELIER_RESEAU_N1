@@ -33,7 +33,7 @@ jobs:
 
           # Optional: set PA_HOST secret to "eu.pythonanywhere.com" if your account is on EU.
           HOST="${{ secrets.PA_HOST }}"
-          if [[ -z "${HOST}" ]]; then HOST="https://hypcscfa.pythonanywhere.com"; fi
+          if [[ -z "${HOST}" ]]; then HOST="www.hypcscfa.pythonanywhere.com"; fi
 
           echo "Using PythonAnywhere host: ${HOST}"
           echo "Target directory: ${TARGET_DIR}"
